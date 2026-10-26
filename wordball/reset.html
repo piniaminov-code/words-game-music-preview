@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>איפוס התקדמות כדורמילים</title>
+<style>body{font-family:system-ui,sans-serif;background:#0b1b3a;color:#fff;text-align:center;padding:28px}button,a.b{display:block;margin:18px auto;padding:16px 22px;font-size:20px;font-weight:800;border:0;border-radius:14px;max-width:320px;width:100%;box-sizing:border-box;text-decoration:none}#go{background:#ef4444;color:#fff}a.b{background:#22c55e;color:#06210f}p{line-height:1.5;font-size:17px}</style></head>
+<body><h2>איפוס התקדמות בכדורמילים</h2>
+<p>האיפוס חל רק על המכשיר הזה, ורק על כדורמילים: מטבעות, דמויות שנפתחו (תישארנה 6 החינמיות), הדמות שנבחרה, ניצחונות ונקודות הקושי. שום דבר אחר לא נמחק.</p>
+<button id="go">אפס את ההתקדמות</button>
+<p id="msg"></p>
+<a class="b" href="./">חזרה למשחק</a>
+<script>
+var K=["milim-wordball-coins-v1","milim-wordball-owned-v1","milim-wordball-char-v1","milim-wordball-wins-v1","milim-wordball-total-v1"];
+document.getElementById("go").onclick=function(){try{K.forEach(function(k){localStorage.removeItem(k)});document.getElementById("msg").textContent="בוצע. ההתקדמות אופסה, 6 הדמויות החינמיות פתוחות.";document.getElementById("go").disabled=true}catch(e){document.getElementById("msg").textContent="לא הצלחתי לאפס: "+e}};
+</script></body></html>
